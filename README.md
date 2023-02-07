@@ -166,13 +166,55 @@ setInterval(function(){
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<tittle>galeria</tittle>
+</head>
+<style>
+*{box-sizing:border-box;}
+body{margin:0;font-family:arial;}
+.galeria{display:inline-block; border:1px solid #000;width:100px;margin-bottom:10px;}
+.galeria img{opacity:0.7; cursor:pointer; width:150px;margin:5px;margin-right:0px;}
+.galeria img:hover{opacity:1;}
+.container{position:relative; display:none/*para começar oculta*/;width:60%;margin:auto;}
+.container img{width:100%;}
+.btnFechar{position:absolute;top:10px;right:15px;color:#fff;font-size:40px;cursor:pointer;}
+</style>
 
+<body>
 
+<section class="galeria">
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">	
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">	
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">	
+	<img src="imagem" alt="imagem" onclick="mostrarImagem">
+</section>
 
+<section class="container">
+	<span onclick="this.parentElement.style.display ='none'" class="btnFechar">&times;</span> -----> script do botão fechar(no htm)
+	<img id="imagemGrande">
+</section>
 
+<section>
+	<p>Galeria de imagem</p>
+</section>
 
+</body>
 
+</html>
 
+script vvvv
+
+function mostrarImagem(img){
+	const imagemGrande = document.getElementById("imagemGrande");
+	imagemGrande.src="imagem";
+	imagemGrande.parentElement.style.display ="block";
+	}
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 
